@@ -25,6 +25,7 @@ async function showArtApi(){
     }
     //test si le Json est vide
     else{
+        //affichage du Json d'erreur dans zone
         zone.innerHTML += "<p>erreur : " + json2.error + "</p>"; 
     }
 }

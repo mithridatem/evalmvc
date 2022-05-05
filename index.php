@@ -28,7 +28,6 @@
         case $path === "/evalmvc/deleteArticle":
             include './controler/controler_delete_article.php';
 		    break ;
-<<<<<<< HEAD
         //route /evalmvc/getApi -> ./api/api.php
         case $path === "/evalmvc/getApi":
             include './api/api.php';
@@ -38,21 +37,6 @@
             include './controler/controler_api_all_article.php';
 		    break ;
         
-=======
-        //route /evalmvc/addUser -> ./controler/controler_add_user.php
-        case $path === "/evalmvc/addUser":
-            include './controler/controler_add_user.php';
-		    break ;
-        //route /evalmvc/connexion -> ./controler/controler_connexion.php
-        case $path === "/evalmvc/connexion":
-            include './controler/controler_connexion.php';
-		    break ;
-        //route /evalmvc/deco -> ./controler/controler_deconnexion.php
-        case $path === "/evalmvc/deco":
-            include './controler/controler_deconnexion.php';
-		    break ;
-            
->>>>>>> 8f4eaa367c4445af29306bc469ba6394583c10fc
         //route /evalmvc/error -> ./error.php
         case $path === "/evalmvc/error":
             include './error.php';
