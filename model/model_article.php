@@ -46,7 +46,7 @@
                 VALUES(:nom_article, :prix_article)');
                 $req->execute(array(
                     'nom_article' => $nom,
-                    'prix_article' =>$prix
+                    'prix_article' => $prix
                     ));
             }
             catch(Exception $e)

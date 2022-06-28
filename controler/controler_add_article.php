@@ -1,10 +1,13 @@
 <?php
     //import
     include './utils/connectBdd.php';
+    //model
     include './model/model_article.php';
-    include './view/view_add_article.php';
-    //menu 
+     //menu 
     include './view/view_menu.php';
+    //vue
+    include './view/view_add_article.php';
+   
     //variable message
     $msg = "Ajoutez un article";
     $art = new Article(null, null);

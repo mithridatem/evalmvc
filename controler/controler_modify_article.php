@@ -2,9 +2,9 @@
     //import
     include './utils/connectBdd.php';
     include './model/model_article.php';
-    include './view/view_modify_article.php';
     //menu 
     include './view/view_menu.php';
+    include './view/view_modify_article.php';
     //variable message
     $msg = "Article en attente de modification";
     //test si l'id existe

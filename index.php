@@ -42,8 +42,8 @@
             include './error.php';
 		    break ;
         //route en cas d'erreur
-        case $path !== "/evalmvc/":
-            include './error.php';
+        default:
+            include './controler/controler_show_all_article.php';
 		    break ;
     }
 ?>

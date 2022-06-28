@@ -2,9 +2,10 @@
     //import
     include './utils/connectBdd.php';
     include './model/model_article.php';
-    include './view/view_show_all_article.php';
     //menu 
     include './view/view_menu.php';
+    include './view/view_show_all_article.php';
+    
     //message d'erreur
     $msg = "Sélectionnez un article à Modifier ou supprimer";
     //test si aucun id existe (modification ou suppression)
