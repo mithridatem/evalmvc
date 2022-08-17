@@ -6,6 +6,7 @@
         private $first_name_util;
         private $mail_util;
         private $pwd_util;
+        private $id_role;
         //constructeur
         public function __construct($name, $first, $mail, $password){
             $this->name_util = $name;
@@ -43,6 +44,12 @@
         }
         public function setPwdUtil($password):void{
             $this->pwd_util = $password;
+        }
+        public function getIdRole():int{
+            return $this->id_role;
+        }
+        public function setIdRole($id):void{
+            $this->id_role = $id;
         }
         //Méthodes
         //création d'un utilisateur en BDD (utilisateur)
