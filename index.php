@@ -9,6 +9,10 @@
     //test de la valeur $path dans l'URL et import de la ressource
     switch($path){
         //route /evalmvc/test -> ./test.php
+        case $path === "/evalmvc/addUser" : 
+            include './controler/controler_add_user.php';
+            break ;
+        //route /evalmvc/test -> ./test.php
         case $path === "/evalmvc/test" : 
             include './test.php';
             break ;
@@ -41,7 +45,7 @@
             include './controler/controler_connexion.php';
 		    break ;
         //route /evalmvc/deconnexion -> ./controler/controler_deconnexion.php
-        case $path === "/evalmvc/connexion":
+        case $path === "/evalmvc/deconnexion":
             include './controler/controler_deconnexion.php';
 		    break ;        
         //route /evalmvc/error -> ./error.php

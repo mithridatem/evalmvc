@@ -41,7 +41,6 @@
         else{
             $message = "Veuillez compléter les champs du formulaire";
         }
-
     }
     else{
         $message = "Pour se connecter cliquez sur connexion";
