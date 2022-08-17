@@ -36,7 +36,14 @@
         case $path === "/evalmvc/apiAllArticle":
             include './controler/controler_api_all_article.php';
 		    break ;
-        
+        //route /evalmvc/connexion -> ./controler/controler_connexion.php
+        case $path === "/evalmvc/connexion":
+            include './controler/controler_connexion.php';
+		    break ;
+        //route /evalmvc/deconnexion -> ./controler/controler_deconnexion.php
+        case $path === "/evalmvc/connexion":
+            include './controler/controler_deconnexion.php';
+		    break ;        
         //route /evalmvc/error -> ./error.php
         case $path === "/evalmvc/error":
             include './error.php';
