@@ -4,5 +4,6 @@
         <li><a href="/evalmvc/showArticle">liste des articles</a></li>
         <li><a href="/evalmvc/connexion">Connexion</a></li>
         <li><a href="/evalmvc/addUser">ajouter compte</a></li>
+        <li><a href="/evalmvc/deconnexion">deconnexion</a></li>
     </ul>
 </nav>
