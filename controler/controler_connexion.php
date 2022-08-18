@@ -2,6 +2,8 @@
     //import
     include './utils/connectBdd.php';
     include './model/model_user.php';
+     //menu 
+     include './view/view_menu.php';
     include './view/view_connexion.php';
     //test logique
     $message= "";
@@ -27,7 +29,10 @@
                     $_SESSION['connected'] = true;
                     $_SESSION['id'] = $test[0]['id_util'];
                     $_SESSION['name'] = $test[0]['name_util'];
+                    $_SESSION['first'] = $test[0]['first_name_util'];
                     $_SESSION['mail'] = $test[0]['mail_util'];
+                    $_SESSION['role'] = $test[0]['id_role'];
+
                     //message connecté
                     $message ="Connecté";
                 }

@@ -2,6 +2,8 @@
      //import
      include './utils/connectBdd.php';
      include './model/model_user.php';
+      //menu 
+    include './view/view_menu.php';
      include './view/view_add_user.php';
     //test logique:
     //variable qui va contenir les messages erreurs
@@ -14,6 +16,10 @@
             //instance d'un nouvel objet Utilisateur
             $util = new Utilisateur($_POST['name_util'], $_POST['first_name_util'],
             $_POST['mail_util'], $_POST['pwd_util']);
+            //test si c'est un admin
+            if(isset($_POST['id_role'])){
+                $util->setIdRole(2);
+            }
             //hashage du mot de passe -> setPwdUtil()
             $util->setPwdUtil(password_hash($util->getPwdUtil(),PASSWORD_DEFAULT));
             //appel de la méthode qui recherche un utilisateur par son mail

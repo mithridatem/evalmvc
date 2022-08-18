@@ -1,6 +1,6 @@
-create database ticket;
+create database securite;
 
-use ticket;
+use securite;
 
 create table vendeur(
 id_vendeur int auto_increment primary key not null,

@@ -1,18 +1,19 @@
 <?php
     class Utilisateur{
         //attributs
-        private $id_util;
-        private $name_util;
-        private $first_name_util;
-        private $mail_util;
-        private $pwd_util;
-        private $id_role;
+        private int $id_util;
+        private string $name_util;
+        private string $first_name_util;
+        private string $mail_util;
+        private string $pwd_util;
+        private int $id_role;
         //constructeur
-        public function __construct($name, $first, $mail, $password){
+        public function __construct(string $name, string $first, string $mail, string $password){
             $this->name_util = $name;
             $this->first_name_util = $first;
             $this->mail_util = $mail;
             $this->pwd_util = $password;
+            $this->id_role = 1;
         }
         //Getter and Setter
         public function getIdUtil():int{
@@ -30,25 +31,25 @@
         public function getPwdUtil():string{
             return $this->pwd_util;
         }
-        public function setIdUtil($id):void{
+        public function setIdUtil(int $id):void{
             $this->id_util = $id;
         }
-        public function setNameUtil($name):void{
+        public function setNameUtil(string $name):void{
             $this->name_util = $name;
         }
-        public function setFirstNameUtil($first):void{
+        public function setFirstNameUtil(string $first):void{
             $this->first_name_util = $first;
         }
-        public function setMailUtil($mail):void{
+        public function setMailUtil(string $mail):void{
             $this->mail_util = $id;
         }
-        public function setPwdUtil($password):void{
+        public function setPwdUtil(string $password):void{
             $this->pwd_util = $password;
         }
         public function getIdRole():int{
             return $this->id_role;
         }
-        public function setIdRole($id):void{
+        public function setIdRole(int $id):void{
             $this->id_role = $id;
         }
         //Méthodes
@@ -59,14 +60,17 @@
             $first = $this->getFirstNameUtil();
             $mail = $this->getMailUtil();
             $password = $this->getPwdUtil();
+            $id = $this->getIdRole();
             try{
                 $req = $bdd->prepare('INSERT INTO utilisateur(name_util, first_name_util,
-                mail_util, pwd_util) VALUES (:name_util, :first_name_util, :mail_util, :pwd_util)');
+                mail_util, pwd_util, id_role) VALUES (:name_util, :first_name_util, :mail_util, 
+                :pwd_util, :id_role)');
                 $req->execute(array(
                     'name_util' => $name,
                     'first_name_util' => $first,
                     'mail_util' => $mail,
                     'pwd_util' => $password,
+                    'id_role' => $id,
                     ));
             }
             catch(Exception $e)
