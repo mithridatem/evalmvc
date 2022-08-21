@@ -5,7 +5,7 @@
     $tab = array(
     'error' => 'Pas de Json',);
     //imports
-    include './utils/connectBdd.php';
+    include './utils/connectUtilBdd.php';
     include './model/model_article.php';
     if(isset($_GET['allArticle'])){
         //instance obj Article

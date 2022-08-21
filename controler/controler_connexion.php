@@ -1,12 +1,13 @@
 <?php
     //import
-    include './utils/connectBdd.php';
+    include './utils/connectUtilBdd.php';
     include './model/model_user.php';
-     //menu 
-     include './view/view_menu.php';
+    //menu 
+    include './view/view_menu.php';
     include './view/view_connexion.php';
     //test logique
     $message= "";
+    //test si l'utilisateur est déconnecté
     if(isset($_GET['deco'])){
         $message= "Déconnecté";
     }

@@ -1,10 +1,10 @@
 <?php
-     //import
-     include './utils/connectBdd.php';
-     include './model/model_user.php';
-      //menu 
+    //import
+    include './utils/connectUtilBdd.php';
+    include './model/model_user.php';
+    //menu 
     include './view/view_menu.php';
-     include './view/view_add_user.php';
+    include './view/view_add_user.php';
     //test logique:
     //variable qui va contenir les messages erreurs
     $message = "";
@@ -20,12 +20,13 @@
             if(isset($_POST['id_role'])){
                 $util->setIdRole(2);
             }
-            //hashage du mot de passe -> setPwdUtil()
-            $util->setPwdUtil(password_hash($util->getPwdUtil(),PASSWORD_DEFAULT));
             //appel de la méthode qui recherche un utilisateur par son mail
             $mail = $util->showUserByMail($bdd);
             //test si le mail n'existe pas 
             if(empty($mail)){
+                //hashage du mot de passe -> setPwdUtil()
+                $util->setPwdUtil(password_hash($util->getPwdUtil(),PASSWORD_DEFAULT));
+                //ajout en BDD de l'utilisateur (ou admin)
                 $util->createUser($bdd);
                 //message compté ajouté
                 $message = 'Le compte '.$util->getMailUtil().' à été ajouté en BDD';

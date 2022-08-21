@@ -3,35 +3,35 @@
         /*-----------------------------------------
                         ATTRIBUTS
         ----------------------------------------*/
-        private $id_article;
-        private $nom_article;
-        private $prix_article;
+        private ?int $id_article;
+        private ?string $nom_article;
+        private ?float $prix_article;
         /*-----------------------------------------
                         CONSTRUCTEUR
         ----------------------------------------*/
-        public function __construct($nom, $prix){
+        public function __construct(?string $nom, ?float $prix){
             $this->nom_article = $nom;
             $this->prix_article = $prix;
         }
         /*-----------------------------------------
                     GETTERS AND SETTER
         ----------------------------------------*/
-        public function getIdArticle():int{
+        public function getIdArticle():?int{
             return $this->id_article;
         }
-        public function getNomArticle():string{
+        public function getNomArticle():?string{
             return $this->nom_article;
         }
-        public function getPrixArticle():float{
+        public function getPrixArticle():?float{
             return $this->prix_article;
         }
-        public function setIdArticle($id):void{
+        public function setIdArticle(?int $id):void{
             $this->id_article = $id;
         }
-        public function setNomArticle($nom):void{
+        public function setNomArticle(?string $nom):void{
             $this->nom_article = $nom;
         }
-        public function setPrixArticle($prix):void{
+        public function setPrixArticle(?float $prix):void{
             $this->prix_article = $prix;
         }
         /*-----------------------------------------

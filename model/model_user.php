@@ -82,7 +82,8 @@
         //récupérer si l'utilisateur (mail_util) existe en BDD (utilisateur)
         public function showUserByMail($bdd):array{
             try{
-                $req = $bdd->prepare('SELECT * FROM utilisateur 
+                $req = $bdd->prepare('SELECT id_util, name_util, first_name_util, 
+                mail_util, pwd_util, id_role FROM utilisateur 
                 WHERE mail_util = :mail_util');
                 $req->execute(array(
                     'mail_util' => $this->getMailUtil(),

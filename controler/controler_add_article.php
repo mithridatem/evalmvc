@@ -1,6 +1,6 @@
 <?php
     //import
-    include './utils/connectBdd.php';
+    include './utils/connectUtilBdd.php';
     //model
     include './model/model_article.php';
      //menu 
